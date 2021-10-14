@@ -26,3 +26,14 @@ php run.php
 ```
 
 And it will output the Markdown table with the team member's avatar and their username as the `alt` text.
+
+The output will look like:
+
+```
+| ---- |
+| ![user1](https://avatars.githubusercontent.com/u/12345678?u=9bc34549d565d9505b287de0cd20ac77be1d3f2c&v=4) |
+| ![user2](https://avatars.githubusercontent.com/u/12345678?u=9bc34549d565d9505b287de0cd20ac77be1d3f2c&v=4) |
+| ![user3](https://avatars.githubusercontent.com/u/12345678?u=9bc34549d565d9505b287de0cd20ac77be1d3f2c&v=4) |
+```
+
+...and so on

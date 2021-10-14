@@ -15,9 +15,9 @@ composer install
 
 To use the script, you'll need to define a `.env` file in the same directory following the template in `.env.tmp`.
 
-`GH_TOKEN` is a personal access token that has access to the org you're requesting
-`GH_USER` is the username to use (most likely yours) and the account the token belongs to
-`GH_REPO` is the URL portion of the API request for the team. See [this documentation](https://docs.github.com/en/rest/reference/teams#members) for more information on that structure.
+- `GH_TOKEN` is a personal access token that has access to the org you're requesting
+- `GH_USER` is the username to use (most likely yours) and the account the token belongs to
+- `GH_REPO` is the URL portion of the API request for the team. See [this documentation](https://docs.github.com/en/rest/reference/teams#members) for more information on that structure.
 
 Then you should be able to just run it:
 

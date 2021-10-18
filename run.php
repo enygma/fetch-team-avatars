@@ -4,7 +4,7 @@ require_once __DIR__.'/vendor/autoload.php';
 
 use Cmd\Command;
 
-if (if_file(__DIR__.'/.env')) {
+if (is_file(__DIR__.'/.env')) {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 } else {

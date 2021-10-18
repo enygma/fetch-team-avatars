@@ -4,8 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ad3da82a6268debda3d319cba609bdc",
+    "content-hash": "aa649eb3a9f9d76e954097e0b3bfd92f",
     "packages": [
+        {
+            "name": "enygma/cmd",
+            "version": "0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/enygma/cmd.git",
+                "reference": "218e5d58f6f68b8c78798340c8661cad912686e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/enygma/cmd/zipball/218e5d58f6f68b8c78798340c8661cad912686e6",
+                "reference": "218e5d58f6f68b8c78798340c8661cad912686e6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cmd\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Cornutt",
+                    "email": "ccornutt@phpdeveloper.org",
+                    "homepage": "http://www.phpdeveloper.org/"
+                }
+            ],
+            "description": "A simple command line option parser",
+            "homepage": "https://github.com/enygma/cmd.git",
+            "keywords": [
+                "argument",
+                "command",
+                "parse"
+            ],
+            "support": {
+                "issues": "https://github.com/enygma/cmd/issues",
+                "source": "https://github.com/enygma/cmd/tree/master"
+            },
+            "time": "2016-06-09T13:18:04+00:00"
+        },
         {
             "name": "graham-campbell/result-type",
             "version": "v1.0.2",

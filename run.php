@@ -2,8 +2,19 @@
 
 require_once __DIR__.'/vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+use Cmd\Command;
+
+if (if_file(__DIR__.'/.env')) {
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+} else {
+    // Otherwise try and use the command line values
+    $cmd = new Command();
+    $args = $cmd->execute($_SERVER['argv']);
+
+    $_ENV = array_merge($_ENV, $args);
+}
+
 
 $client = new GuzzleHttp\Client();
 
@@ -14,8 +25,16 @@ $res = $client->request('GET', $url, [
 ]);
 $body = json_decode($res->getBody());
 
-$output = "| ---- | \n";
+$count = 1;
+$output = '';
+// $output = "| ---- | \n";
 foreach ($body as $members) {
-    $output .= "| ![".$members->login."](".$members->avatar_url.") |\n";
+    // $output .= "| ![".$members->login."](".$members->avatar_url.") |\n";
+    // $output .= '|<a href="https://github.com/'.$members->login.'"><img src="'.$members->avatar_url.'" height="20" width="20"></a> |';
+    $output .= '<a href="https://github.com/'.$members->login.'"><img src="'.$members->avatar_url.'" height="50" width="50"></a>'."\n";
+
+    if ($count % 7 == 0 && $count !== 0) { $output .= "<br/>\n"; }
+
+    $count++;
 }
 echo $output;
